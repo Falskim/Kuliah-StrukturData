@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Axioo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-12-07 01:31:59 AM"/>
+        <attribute name="created" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDowMjo1MiBBTTsyMzQ4"/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDo1Mzo0MSBBTTsxO0F4aW9vO0FYSU9PLVBDOzIwMTgtMTItMDc7MTA6MDI6NTIgQU07SGFzaFJ1bm5lci5mcHJnOzY0MjU="/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMTowODoxNCBBTTsxO0F4aW9vO0FYSU9PLVBDOzIwMTgtMTItMDc7MTA6MDI6NTIgQU07U29ydFNlYXJjaC5mcHJnOzY0MjY="/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzswMTozMTo1OSBBTTs2OzI0NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="mainMenu()"/>
+            <comment text="mainMenu() akan mencetak daftar pilihan yang tersedia"/>
+            <comment text="1)Sorting &amp; Searching  &#13;&#10;2)Array List    &#13;&#10;3)Linked List   &#13;&#10;4)Tree  &#13;&#10;5)Graf  &#13;&#10;&#13;&#10;9)Informasi Kelompok  &#13;&#10;&#13;&#10;0)Keluar  "/>
+            <declare name="opsiMenu" type="Integer" array="False" size=""/>
+            <do expression="opsiMeni !=0">
+                <input variable="opsiMenu"/>
+                <if expression="opsiMenu == 1">
+                    <then>
+                        <call expression="SortSearch()"/>
+                        <comment text="SortSearch.java"/>
+                    </then>
+                    <else>
+                        <if expression="opsiMenu == 2">
+                            <then>
+                                <call expression="CollectionArrayList()"/>
+                                <comment text="CollectionArrayList.java"/>
+                            </then>
+                            <else>
+                                <if expression="opsiMenu == 3">
+                                    <then>
+                                        <call expression="LinkedListRunner()"/>
+                                        <comment text="LinkedListRunner.java"/>
+                                    </then>
+                                    <else>
+                                        <if expression="opsiMenu == 4">
+                                            <then>
+                                                <call expression="TreeRunner()"/>
+                                                <comment text="TreeRunner.java"/>
+                                            </then>
+                                            <else>
+                                                <if expression="opsiMenu == 5">
+                                                    <then>
+                                                        <call expression="HashRunner()"/>
+                                                        <comment text="HashRunner.java"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="opsiMenu == 6">
+                                                            <then>
+                                                                <call expression="Graph()"/>
+                                                                <comment text="Graph.java"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="opsiMenu == 9">
+                                                                    <then>
+                                                                        <call expression="information()"/>
+                                                                        <comment text="Menampilkan daftar anggota kelompok"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="opsiMenu == 0">
+                                                                            <then>
+                                                                                <comment text="Program Akan Keluar"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot;Input Salah&quot;" newline="True"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Axioo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-12-07 11:08:08 AM"/>
+        <attribute name="created" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDowMjo1MiBBTTsyMzQ4"/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDo1Mjo0OCBBTTsxO0F4aW9vO0FYSU9PLVBDOzIwMTgtMTItMDc7MTA6MDI6NTIgQU07SGFzaFJ1bm5lci5mcHJnOzY0MzE="/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMTowNzowNSBBTTsxO0F4aW9vO0FYSU9PLVBDOzIwMTgtMTItMDc7MTA6MDI6NTIgQU07U29ydFNlYXJjaC5mcHJnOzY0MjU="/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMTowODowOCBBTTsxMDsyNTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="mainMenu()"/>
+            <comment text="mainMenu() akan mencetak daftar pilihan yang tersedia"/>
+            <comment text="1)Atur Banyak Data     &#13;&#10;2)Tampilan Semua Data  &#13;&#10;3)Hapus Data     &#13;&#10;4)Hapus Semua Data   &#13;&#10;&#13;&#10;0)Keluar"/>
+            <declare name="opsiMenu" type="Integer" array="False" size=""/>
+            <do expression="opsiMeni !=0">
+                <input variable="opsiMenu"/>
+                <if expression="opsiMenu == 1">
+                    <then>
+                        <call expression="inputData()"/>
+                    </then>
+                    <else>
+                        <if expression="opsiMenu == 2">
+                            <then>
+                                <if expression="isEmpty()">
+                                    <then>
+                                        <output expression="&quot;Data kosong, inputkan terlebih dahulu&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <call expression="printData()"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="opsiMenu == 3">
+                                    <then>
+                                        <if expression="isEmpty()">
+                                            <then>
+                                                <output expression="&quot;Data kosong, inputkan terlebih dahulu&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <call expression="removeData()"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="opsiMenu == 4">
+                                            <then>
+                                                <if expression="isEmpty()">
+                                                    <then>
+                                                        <output expression="&quot;Data kosong, inputkan terlebih dahulu&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <call expression="clearData()"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="opsiMenu == 0">
+                                                    <then>
+                                                        <comment text="Program Akan Keluar"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Input Salah&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

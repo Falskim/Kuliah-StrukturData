@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Axioo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-12-07 01:54:55 AM"/>
+        <attribute name="created" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDowMjo1MiBBTTsyMzQ4"/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzsxMDo1NDoxOCBBTTsxO0F4aW9vO0FYSU9PLVBDOzIwMTgtMTItMDc7MTA6MDI6NTIgQU07VHVnYXNCZXNhclN0cnVrZGF0LmZwcmc7NzI2Nw=="/>
+        <attribute name="edited" value="QXhpb287QVhJT08tUEM7MjAxOC0xMi0wNzswMTo1NDo1NSBBTTsxMDsyNTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jumlahNode, awal" type="Integer" array="False" size=""/>
+            <declare name="matriksNode" type="Integer" array="False" size=""/>
+            <do expression="ulang">
+                <output expression="&quot;Masukan Jumlah Node&quot;" newline="True"/>
+                <input variable="jumlahNode"/>
+                <output expression="&quot;Masukan Matriks Node&quot;" newline="True"/>
+                <input variable="matriksNode"/>
+                <output expression="&quot;Masukan Node Awal&quot;" newline="True"/>
+                <input variable="awal"/>
+                <comment text="Proses Method DFS"/>
+                <declare name="jumlahNodeTerlewat" type="Integer" array="True" size="jumlahNode+1"/>
+                <declare name="element, i" type="Integer" array="False" size=""/>
+                <assign variable="element" expression="awal"/>
+                <assign variable="i" expression="awal"/>
+                <output expression="element" newline="True"/>
+                <call expression="stackPush(awal)"/>
+                <while expression="Stack != kosong">
+                    <assign variable="element" expression="stackPeek()"/>
+                    <assign variable="i" expression="element"/>
+                    <while expression="i &lt;= jumlahNode">
+                        <if expression="jumlahNodeTerlewati==0">
+                            <then>
+                                <call expression="stackPush(i)"/>
+                                <assign variable="element" expression="i"/>
+                                <assign variable="i" expression="1"/>
+                                <output expression="element" newline="True"/>
+                            </then>
+                            <else>
+                                <assign variable="i" expression="i+1"/>
+                            </else>
+                        </if>
+                    </while>
+                    <call expression="stackPop()"/>
+                </while>
+                <comment text="Keluar dari DFS"/>
+                <declare name="ulang" type="Boolean" array="False" size=""/>
+                <input variable="ulang"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
